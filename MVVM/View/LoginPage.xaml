@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mtc="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+            x:Class="Accounts.MVVM.View.LoginPage"
+       
+                  HeightRequest="500"
+             WidthRequest="500"
+             BackgroundColor="White" 
+       
+            
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontSize" Value="16" />
+                <!-- Add more properties as needed -->
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PickerItemStyle" TargetType="Picker">
+                --><!--<Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="Black"/>
+                --><!-- Change the text color to blue --><!--
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+
+    <!--BackgroundColor="#44c0dc"-->
+
+
+
+    
+    <Frame  BackgroundColor="#44c0dc" CornerRadius="20"   VerticalOptions="Center"  HeightRequest="440" WidthRequest="480" >
+            <!--<Label Text="kdfd"/>-->
+          
+            <!--Grid-->
+        <Grid BackgroundColor="#44c0dc" HeightRequest="400"   RowDefinitions="Auto,Auto ,Auto,Auto ,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="150,200,250" HorizontalOptions="Center" VerticalOptions="Start" >
+          
+
+                <Grid Grid.Row="0" Grid.Column="1" RowDefinitions="Auto,Auto" ColumnDefinitions="200,200,50"  HorizontalOptions="Center" >
+                    <Label Grid.Row="0" Grid.Column="0" Text="User Login" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Large" TextColor="White" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="" HeightRequest="30"/>
+                </Grid>
+            <ImageButton CornerRadius="20"  Grid.Row="1" Grid.Column="0" BackgroundColor="White"  HorizontalOptions="Start" HeightRequest="30" WidthRequest="40" Source="user.png" />
+               
+          
+            <!-- user-->
+            <Entry Grid.Row="1" Grid.Column="1"  Placeholder="User Name" x:Name="txtUserName" IsTextPredictionEnabled="True" FontAttributes="Bold"  HeightRequest="50" WidthRequest="370"  BackgroundColor="White" TextColor="black
+                   "/>
+
+            <Label Grid.Row="2" Grid.Column="0" Text=""/>
+            <!--password-->
+            <ImageButton CornerRadius="20"  Grid.Row="3" Grid.Column="0" BackgroundColor="White" HorizontalOptions="Start" HeightRequest="30" WidthRequest="40" Source="pwd.png"/>
+            <!-- user-->
+                <Entry Grid.Row="3" Grid.Column="1" Placeholder="Password" x:Name="txtPwd"   FontAttributes="Bold" HeightRequest="50" WidthRequest="370"  BackgroundColor="White" TextColor="Black"/>
+            <Label Grid.Row="4" Grid.Column="0" Text=""/>
+
+            <!--Branch-->
+            <ImageButton CornerRadius="20"  Grid.Row="5" Grid.Column="0" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="End" HeightRequest="30" WidthRequest="40" Source="branchtwo.png"/>
+            <!-- user-->
+            <!--<Entry Grid.Row="5" Grid.Column="2" Placeholder="Branch" x:Name="txtBrach" HeightRequest="50" WidthRequest="250"  BackgroundColor="White" TextColor="Black"/>-->
+
+            <!--<mtc:Expander >
+                <StackLayout>
+                    <Entry  Placeholder="Select Branch here"/>
+                </StackLayout>
+                
+               
+                
+            </mtc:Expander>-->
+                 
+                          <!--uncoment-->
+            
+           <Picker  Grid.Row="5" Grid.Column="1" VerticalOptions="Start" x:Name="pCompany"
+                      HeightRequest="0" BackgroundColor="White"
+                    TitleColor="#FEFEFE"                      
+                    TextColor="#000"  WidthRequest="370" SelectedIndexChanged="pCompany_SelectedIndexChanged">
+              
+               
+               
+               
+            </Picker>
+            <!--<Label  Grid.Row="5" Grid.Column="1" Text="Selected Option:" FontSize="18" Margin="10" x:Name="SelectedOptionLabel"/>-->
+
+
+
+            <!--<Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Baboon</x:String>
+                        <x:String>Capuchin Monkey</x:String>
+                        <x:String>Blue Monkey</x:String>
+                        <x:String>Squirrel Monkey</x:String>
+                        <x:String>Golden Lion Tamarin</x:String>
+                        <x:String>Howler Monkey</x:String>
+                        <x:String>Japanese Macaque</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>-->
+
+                    <!--uncoment-->
+            <AbsoluteLayout Grid.Row="5" Grid.Column="1">
+                <Image Source="dropdown.png"   AbsoluteLayout.LayoutBounds="0,0,02.62,1" WidthRequest="42" AbsoluteLayout.LayoutFlags="All"
+                       Opacity="2"
+                   InputTransparent="True" 
+                  
+                    />
+            </AbsoluteLayout>
+                        
+                        
+            <!--<Picker x:Name="pCompany" Style="{StaticResource PickerItemStyle}" Title="Click here to Selct Branch" TextColor="Black"  BackgroundColor="Black"  Grid.Row="5" Grid.Column="3"  FontAttributes="Bold"  WidthRequest="500" HorizontalOptions="Start"  >
+                    
+                    -->
+            <Label Grid.Row="6" Grid.Column="0" Text=""/>
+                <ImageButton Padding="7" CornerRadius="20 "  Grid.Row="7" Grid.Column="0" BackgroundColor="White"  VerticalOptions="End" HorizontalOptions="Start" HeightRequest="35" WidthRequest="30" Source="datetwo.png"/>
+            
+                <Picker Grid.Row="7" Grid.Column="1" VerticalOptions="Start" x:Name="pYear" SelectedIndexChanged="pYear_SelectedIndexChanged"
+                    TitleColor="Green" HeightRequest="0"  BackgroundColor="White" WidthRequest="370">
+                <!--<Picker.ItemsSource>-->
+                    <!--<x:Array Type="{x:Type x:String}">
+                        <x:String>Baboon</x:String>
+                        <x:String>Capuchin Monkey</x:String>
+                        <x:String>Blue Monkey</x:String>
+                        <x:String>Squirrel Monkey</x:String>
+                        <x:String>Golden Lion Tamarin</x:String>
+                        <x:String>Howler Monkey</x:String>
+                        <x:String>Japanese Macaque</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>-->
+                 
+                </Picker>
+
+            <AbsoluteLayout Grid.Row="7" Grid.Column="1">
+                <!--<BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />-->
+                <!--<Label Text="Absolute Layout" TextColor="White" AbsoluteLayout.LayoutBounds="0.5,0.5,200,30" AbsoluteLayout.LayoutFlags="PositionProportional" />-->
+                <Image Source="dropdown.png"   AbsoluteLayout.LayoutBounds="0,0,02.62,1" WidthRequest="42" AbsoluteLayout.LayoutFlags="All"
+           Opacity="2"
+       InputTransparent="True" 
+      
+        />
+            </AbsoluteLayout>
+            <Label Grid.Row="8" Grid.Column="1" Text="" HeightRequest="10"/>
+
+                <!--<ImageButton Margin="5" Grid.Row="9" Grid.Column="0" HeightRequest="60" x:Name="btnOk" VerticalOptions="Center" WidthRequest="100" HorizontalOptions="End" Source="ok.png" Clicked="btnOk_Clicked"/>
+                <ImageButton Grid.Row="9" Grid.Column="1" x:Name="btnExit" VerticalOptions="Start" HeightRequest="60" WidthRequest="100" HorizontalOptions="Start"  Source="exit.png" Clicked="btnExit_Clicked"/>-->
+                <Grid Grid.Row="9" Grid.Column="1" Margin="-5" RowDefinitions="Auto , Auto, Auto, Auto" ColumnDefinitions="10, 0" HorizontalOptions="Center"  >
+                <ImageButton  CornerRadius="20" Margin="5" Grid.Row="0" Grid.Column="0" HeightRequest="60" x:Name="btnOk" VerticalOptions="Center" WidthRequest="100" HorizontalOptions="End" Source="ok.png" Clicked="btnOk_Clicked"/>
+                <ImageButton  Grid.Row="0" Grid.Column="1" x:Name="btnExit" VerticalOptions="Start" HeightRequest="60" WidthRequest="100" HorizontalOptions="Start"  Source="exit.png" Clicked="btnExit_Clicked"/>
+            </Grid>
+            <!--<ImageButton Grid.Row="9" Grid.Column="2" HeightRequest="30" WidthRequest="100" HorizontalOptions="Start"  Source="ok.png"/>
+            <ImageButton Grid.Row="9" Grid.Column="2" HeightRequest="30" HorizontalOptions="Center"  Source="exit.png"/>-->
+            
+            
+        </Grid>
+            
+      
+        </Frame>
+    
+    
+</ContentPage>
+
+
+    

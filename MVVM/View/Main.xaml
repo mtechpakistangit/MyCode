@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Accounts.MVVM.View.MtechAccTwo"
+             Title="">
+
+   
+        <ContentPage.MenuBarItems>
+            <MenuBarItem Text="File">
+                <MenuFlyoutItem Text="LogOff" x:Name="mnuLogOff" Clicked="mnuLogOff_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Exit" x:Name="mnuExit" Clicked="mnuExit_Clicked"/>
+            </MenuBarItem>
+            
+            
+            
+            
+            <MenuBarItem Text="Master">
+
+            <MenuFlyoutItem Text="Company" x:Name="mnuCompany" Clicked="mnuCompany_Clicked"/>
+
+            <MenuFlyoutSeparator/>
+                
+            <MenuFlyoutItem Text="Branch" x:Name="mnuBranch" Clicked="mnuBranch_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Fiscal Year" x:Name="mnuFiscalYear" Clicked="mnuFiscalYear_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Users" x:Name="mnuUser" Clicked="mnuUser_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Account Type" x:Name="mnuAccountType" Clicked="mnuAccountType_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Transaction Type" x:Name="mnuTransactionType" Clicked="mnuTransactionType_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Accounts Master" x:Name="mnuAccountMaster" Clicked="mnuAccountMaster_Clicked"/>
+            <MenuFlyoutItem Text="Cost Centre" x:Name="mnuCostCentre" Clicked="mnuCostCentre_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Depreciation Method" x:Name="mnuDepreciationMethod" Clicked="mnuDepreciationMethod_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Fixed Assets" x:Name="mnuFixedAssets" Clicked="mnuFixedAssets_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Link Accounts" x:Name="mnuLinkAccounts" Clicked="mnuLinkAccounts_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Account Setup" x:Name="mnuAccountSetup" Clicked="mnuAccountSetup_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Account Posting" x:Name="mnuAccountPosting" Clicked="mnuAccountPosting_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Account Generator" x:Name="mnuAccountGenerator" Clicked="mnuAccountGenerator_Clicked"/>
+            <MenuFlyoutSeparator/>
+
+
+
+
+        </MenuBarItem>
+            
+            
+            <MenuBarItem Text="Transactions">
+                
+                <MenuFlyoutItem Text="JV" x:Name="mnuJV" Clicked="mnuJV_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Payments Voch" x:Name="mnuPaymentVoch" Clicked="mnuPaymentVoch_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Reciept" x:Name="mnuReciept" Clicked="mnuReciept_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Expenses" x:Name="mnuExpenses" Clicked="mnuExpenses_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Post Depreciation" x:Name="mnuPostDepreciation" Clicked="mnuPostDepreciation_Clicked"/>
+               
+                
+            </MenuBarItem>
+            
+            
+            
+            
+            <MenuBarItem Text="Reports">
+                
+            <MenuFlyoutItem Text="Accounts Statements" x:Name="mnuAccountsStatements" Clicked="mnuAccountsStatements_Clicked"/>
+            <MenuFlyoutItem Text="Chart of Account" x:Name="mnuChartOfAccount" Clicked="mnuChartOfAccount_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Print Other Reports" x:Name="mnuPrintOtherReports" Clicked="mnuPrintOtherReports_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Cost Centre Ledger" x:Name="mnuCostCentreLedger" Clicked="mnuCostCentreLedger_Clicked" />
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Transaction Report" x:Name="mnuTransactionReports" Clicked="mnuTransactionReports_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Transaction history" x:Name="mnuTransactionHistory" Clicked="mnuTransactionHistory_Clicked"/>
+                
+            </MenuBarItem>
+            
+            
+            <MenuBarItem Text="Setup">
+                
+            <MenuFlyoutItem Text="Close Fiscal Year" x:Name="mnuCloseFiscalYear" Clicked="mnuCloseFiscalYear_Clicked"/>
+            <MenuFlyoutItem Text="Discard Current Year" x:Name="mnuDiscardCurrentYear" Clicked="mnuDiscardCurrentYear_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Copy Account Master" x:Name="mnuCopyAccountMaster" Clicked="mnuCopyAccountMaster_Clicked"/>
+            <MenuFlyoutSeparator/>  
+            <MenuFlyoutItem Text="Backup Data" x:Name="mnuBackupData" Clicked="mnuBackupData_Clicked"/>
+            <MenuFlyoutSeparator/>
+            <MenuFlyoutItem Text="Create Opening Balance jv" x:Name="mnuCreatOpeningBalance" Clicked="mnuCreatOpeningBalance_Clicked"/>
+            
+                
+            </MenuBarItem>
+
+        <MenuBarItem Text="Close">
+
+            <MenuFlyoutItem Text="Close the page" x:Name="mnuCloseThePage" Clicked="mnuCloseThePage_Clicked"/>
+
+
+        </MenuBarItem>
+
+
+
+
+
+    </ContentPage.MenuBarItems>
+    
+
+
+    <StackLayout BackgroundColor="#5999e3">
+
+        <Grid RowDefinitions="Auto , Auto , Auto  , Auto , Auto, Auto, Auto ,Auto,Auto,Auto" ColumnDefinitions="50,100,200,200,200">
+            <Label Grid.Row="0" Grid.Column="0" Text="" HeightRequest="50"/>
+            <Button Grid.Row="1" Grid.Column="2" BackgroundColor="#2573b5" Text="Account Statement" x:Name="btnAccountStatement" FontAttributes="Bold" TextColor="Black" Clicked="btnAccountStatement_Clicked"/>
+
+
+            <Label Grid.Row="2" Grid.Column="0" Text="" HeightRequest="20"/>
+            <Button Grid.Row="3" Grid.Column="2" BackgroundColor="#2573b5" Text="Print Other Reports" x:Name="btnPrintOtherReports" FontAttributes="Bold" TextColor="Black" Clicked = "btnPrintOtherReports_Clicked"/>
+
+
+
+            <!--<Label Grid.Row="1" Grid.Column="0" Text="" HeightRequest="20"/>-->
+            <Button Grid.Row="1" Grid.Column="4" BackgroundColor="Red" Text="Accounts Master" x:Name="btnAccountsMaster" FontAttributes="Bold" TextColor="Black" Clicked = "btnAccountsMaster_Clicked"/>
+
+               <Label Grid.Row="2" Grid.Column="4" Text="" HeightRequest="20"/>
+
+            <Button Grid.Row="3" Grid.Column="4" Text="JV" x:Name="btnJV"  Background="#2573b5" FontAttributes="Bold" TextColor="Black" Clicked="btnJV_Clicked"/>
+
+
+            <Label Grid.Row="4" Grid.Column="4" Text="" HeightRequest="20"/>
+
+            <Button Grid.Row="5" Grid.Column="4" Text="Payments Voch" x:Name="btnPaymentVoch" Background="#2573b5" FontAttributes="Bold" TextColor="Black" Clicked="btnPaymentVoch_Clicked"/>
+
+
+            <Label Grid.Row="6" Grid.Column="4" Text="" HeightRequest="20"/>
+
+            <Button Grid.Row="7" Grid.Column="4" Text="Reciept" Background="#2573b5" x:Name="btnReciept" FontAttributes="Bold" TextColor="Black" Clicked="btnReciept_Clicked"/>
+
+
+            <Label Grid.Row="8" Grid.Column="4" Text="" HeightRequest="20"/>
+
+            <Button Grid.Row="9" Grid.Column="4" Text="Expenses" Background="#2573b5" x:Name="btnExpenses" FontAttributes="Bold" TextColor="Black" Clicked="btnExpenses_Clicked"/>
+
+
+        </Grid>
+        
+        
+    </StackLayout>
+</ContentPage>

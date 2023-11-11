@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Accounts.MVVM.View.Company"
+             Title="Company"
+             WidthRequest="600"
+             HeightRequest="450">
+    <StackLayout   BackgroundColor="#5999e3" >
+        <Grid RowDefinitions="Auto,Auto,Auto, Auto,Auto,Auto" ColumnDefinitions="120,50,300">
+            <Label Grid.Row="0" Grid.Column="0" Text=""/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Code" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" TextColor="Black"/>
+            <Entry Grid.Row="1" Grid.Column="2" Placeholder="Code" BackgroundColor="White" x:Name="txtCode" WidthRequest="180" HorizontalOptions="Start"  TextColor="Black" />
+
+
+            <Label Grid.Row="2" Grid.Column="0" Text=""/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Name" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="Medium" TextColor="Black"/>
+            <Entry Grid.Row="3" Grid.Column="2" Placeholder="Company Name" x:Name="txtCompanyName"  BackgroundColor="White"  TextColor="Black"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text=""/>
+            <Label Grid.Row="5" Grid.Column="0" Text="Remarks" VerticalOptions="Center"  HorizontalOptions="End" FontSize="Medium" TextColor="Black"/>
+            <Entry Grid.Row="5" Grid.Column="2" Placeholder="Remarks" x:Name="txtRemarks"  BackgroundColor="White"  TextColor="Black"/>
+        </Grid>
+        
+        
+        
+        <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="100,100,100">
+            <Label Grid.Row="0" Grid.Column="0" Text=""/>
+            <Label Grid.Row="1" Grid.Column="0" Text=""/>
+            <Label Grid.Row="2" Grid.Column="0" Text=""/>
+        </Grid>
+
+
+
+        <Frame HeightRequest="120" HorizontalOptions="Center" CornerRadius="10" WidthRequest="550"  BackgroundColor="#5999e3" BorderColor="Black">
+        <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="100,100,100" >
+            
+            
+        </Grid>
+        </Frame>
+        
+        
+        
+        
+    </StackLayout>
+</ContentPage>
